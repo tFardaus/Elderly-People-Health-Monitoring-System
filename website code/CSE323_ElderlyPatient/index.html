@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Monitoring System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Patients</h2>
+            <ul id="patient-list">
+                <li onclick="loadPatientData('patient1')">Patient 1</li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <h1>Patient Info</h1>
+            <div class="data" id="temperature">Temperature: -- °C</div>
+            <div class="data" id="humidity">Humidity: -- %</div>
+            <div class="data" id="body-temp">Body Temperature: -- °F</div>
+            <div class="data" id="fall-status">Fall Status: --</div>
+            <div class="data" id="pulse-sensor">Pulse Status: --</div>
+        </div>
+    </div>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+
+    <!-- Your JavaScript file -->
+    <script src="index.js"></script>
+</body>
+</html>
