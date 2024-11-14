@@ -6,23 +6,46 @@
     <title>Patient Monitoring System</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="container">
-        <div class="sidebar">
-            <h2>Patients</h2>
-            <ul id="patient-list">
-                <li onclick="loadPatientData('patient1')">Patient 1</li>
-            </ul>
-        </div>
-        <div class="main-content">
-            <h1>Patient Info</h1>
-            <div class="data" id="temperature">Temperature: -- °C</div>
-            <div class="data" id="humidity">Humidity: -- %</div>
-            <div class="data" id="body-temp">Body Temperature: -- °F</div>
-            <div class="data" id="fall-status">Fall Status: --</div>
-            <div class="data" id="pulse-sensor">Pulse Status: --</div>
-        </div>
+
+
+
+  <div class="sidebar">
+    <h2>Patients</h2>
+    <ul class="patient-list">
+      <li onclick="loadPatientData('patient1')">patient1</li>
+      <li onclick="loadPatientData('patient2')">patient2</li>
+      <li onclick="loadPatientData('patient3')">patient3</li>
+      <li onclick="loadPatientData('patient4')">patient4</li>
+    </ul>
+  </div>
+
+
+  <div class="main-content">
+    <h1>Patient Information</h1>
+    <div class="info-box">
+      <div class="info-title"></div>
+      <div class="info-data" id="temperature">-</div>
     </div>
+    <div class="info-box">
+      <div class="info-title"></div>
+      <div class="info-data" id="humidity">-</div>
+    </div>
+    <div class="info-box">
+      <div class="info-title"></div>
+      <div class="info-data" id="body-temp">-</div>
+    </div>
+    <div class="info-box">
+      <div class="info-title"></div>
+      <div class="info-data" id="fall-status">-</div>
+    </div>
+    <div class="info-box">
+      <div class="info-title"></div>
+      <div class="info-data" id="pulse-sensor">-</div>
+    </div>
+
+  </div>
 
     <!-- Firebase SDKs -->
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
