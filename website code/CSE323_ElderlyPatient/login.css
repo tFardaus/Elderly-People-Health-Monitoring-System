@@ -1,61 +1,102 @@
-/* Reset default styling */
-* {
+/* Base styling for body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-/* Set the background */
-body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0072ff, #00c6ff);
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
+    justify-content: center;
+    min-height: 100vh;
 }
 
-/* Centered form container */
-#loginForm {
+/* Centering the login container */
+.login-container {
     background-color: #ffffff;
-    width: 400px;
-    padding: 40px;
+    padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
 }
 
-/* Input fields styling */
-#loginForm input[type="email"],
-#loginForm input[type="password"] {
+/* Styling the form header */
+.text-center {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+/* Styling form labels and inputs */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-weight: 500;
+}
+
+input[type="email"],
+input[type="password"] {
     width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #007bff;
 }
 
 /* Button styling */
-#loginForm button {
+.btn {
     width: 100%;
-    padding: 12px;
-    background-color: #0072ff;
-    color: #ffffff;
+    padding: 0.75rem;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 4px;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background-color 0.3s;
 }
 
-#loginForm button:hover {
-    background-color: #005bb5;
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
 }
 
-/* Headline styling */
-#loginForm h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333;
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+    margin-top: 0.5rem;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Margin for the register button */
+.mt-3 {
+    margin-top: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 1.5rem;
+    }
+
+    .text-center {
+        font-size: 1.25rem;
+    }
 }
